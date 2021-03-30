@@ -72,7 +72,9 @@ internal class CustomScanner {
     }
     
     func skip(_ count: Int) {
-        scanLocation += count
+        if !scanner.isAtEnd {
+            scanLocation += count
+        }
     }
 }
 
